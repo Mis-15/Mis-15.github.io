@@ -624,79 +624,24 @@
                                     top: 10px;
                                     right: 0px;
                                     z-index: 9999;
-                                    opacity: 0; /* Inicia invisible */
-                                    transform: translateX(100%); /* Inicia fuera de la pantalla */
-                                    transition: transform 1s ease-out, opacity 1s ease-out;
+                                    
                                 }
                             
-                                .visible {
-                                    opacity: 1;
-                                    transform: translateX(0);
-                                }
+                                
                             </style>
-                            <script>
-                                document.addEventListener("DOMContentLoaded", function () {
-                                    let gif = document.querySelector(".gif-flotante");
-                            
-                                    let observer = new IntersectionObserver(
-                                        function (entries) {
-                                            entries.forEach(entry => {
-                                                if (entry.isIntersecting) {
-                                                    gif.classList.add("visible"); // Activa la animación
-                                                }
-                                            });
-                                        },
-                                        { threshold: 0.5 } // Se activa cuando el 50% del elemento es visible
-                                    );
-                            
-                                    observer.observe(gif);
-                                });
-                            </script>
                             <style>
-                                @keyframes aparecer-desde-izquierda {
-                                    0% {
-                                        transform: translateX(-100%); /* Inicia fuera de la pantalla por la izquierda */
-                                        opacity: 0;
-                                    }
-                                    100% {
-                                        transform: translateX(0); /* Se mueve a la posición original */
-                                        opacity: 1;
-                                    }
-                                }
                                 .gif-flotantee {
                                     width: 300px;
                                     position: absolute;
                                     top: 300px;
                                     left: 0px;
                                     z-index: 9999;
-                                    opacity: 0; /* Inicia invisible */
-                                    transform: translateX(-100%); /* Inicia fuera de la pantalla por la izquierda */
-                                    transition: transform 1s ease-out, opacity 1s ease-out;
-                                }
+                                   }
                             </style>
                             
                             <div class="gif-flotantee">
                                 <img src="/images/florverde2.png" alt="GIF flotante">
                             </div>
-                            
-                            <script>
-                                // Función para verificar si el elemento está en el viewport
-                                function checkVisibility() {
-                                    const element = document.querySelector('.gif-flotantee');
-                                    const rect = element.getBoundingClientRect();
-                                    
-                                    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                                        // Si el elemento es visible, activa la animación
-                                        element.style.animation = 'aparecer-desde-izquierda 1s forwards';
-                                    }
-                                }
-                            
-                                // Ejecutar la función al hacer scroll
-                                window.addEventListener('scroll', checkVisibility);
-                                
-                                // Llamar a la función también al cargar la página para asegurar que funcione en cualquier momento
-                                checkVisibility();
-                            </script>
                             
                             <div class="elementor-element elementor-element-37773cf elementor-widget elementor-widget-image" data-id="37773cf" data-element_type="widget" data-widget_type="image.default">
                                 <div class="elementor-widget-container">
@@ -746,56 +691,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gif-flotant">
-                                        <img src="/images/florverde.png" alt="GIF animado">
-                                    </div>
-                                    <style>
-                                        @keyframes aparecer-desde-derecha {
-                                            0% {
-                                                transform: translateX(100%);
-                                                opacity: 0;
-                                            }
-                                            100% {
-                                                transform: translateX(0);
-                                                opacity: 1;
-                                            }
-                                        }
-                                    
-                                        .gif-flotant {
-                                            width: 300px;
-                                            position: absolute;
-                                            top: 10px;
-                                            right: -8px;
-                                            z-index: 9999;
-                                            opacity: 0; /* Inicia invisible */
-                                            transform: translateX(100%); /* Inicia fuera de la pantalla */
-                                            transition: transform 1s ease-out, opacity 1s ease-out;
-                                        }
-                                    
-                                        .visible {
-                                            opacity: 1;
-                                            transform: translateX(0);
-                                        }
-                                    </style>
-                                    <script>
-                                        document.addEventListener("DOMContentLoaded", function () {
-                                            let gif = document.querySelector(".gif-flotant");
-                                    
-                                            let observer = new IntersectionObserver(
-                                                function (entries) {
-                                                    entries.forEach(entry => {
-                                                        if (entry.isIntersecting) {
-                                                            gif.classList.add("visible"); // Activa la animación
-                                                        }
-                                                    });
-                                                },
-                                                { threshold: 0.5 } // Se activa cuando el 50% del elemento es visible
-                                            );
-                                    
-                                            observer.observe(gif);
-                                        });
-                                    </script>        
-                            
                                     <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-71f67fd" data-id="71f67fd" data-element_type="column">
                                         <div class="elementor-widget-wrap elementor-element-populated">
                                             <div class="elementor-element elementor-element-465c262 elementor-widget elementor-widget-heading" data-id="465c262" data-element_type="widget" data-widget_type="heading.default">
@@ -852,52 +747,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <style>
-                                        @keyframes aparecer-desde-izquierda {
-                                            0% {
-                                                transform: translateX(-100%); /* Inicia fuera de la pantalla por la izquierda */
-                                                opacity: 0;
-                                            }
-                                            100% {
-                                                transform: translateX(0); /* Se mueve a la posición original */
-                                                opacity: 1;
-                                            }
-                                        }
-                                        .gif-flotanteee {
-                                            width: 300px;
-                                            position: absolute;
-                                            top: -200px;
-                                            left: -8px;
-                                            z-index: 9999;
-                                            opacity: 0; /* Inicia invisible */
-                                            transform: translateX(-100%); /* Inicia fuera de la pantalla por la izquierda */
-                                            transition: transform 1s ease-out, opacity 1s ease-out;
-                                        }
-                                    </style>
-                                    
-                                    <div class="gif-flotanteee">
-                                        <img src="/images/florverde2.png" alt="GIF flotante">
-                                    </div>
-                                    
-                                    <script>
-                                        // Función para verificar si el elemento está en el viewport
-                                        function checkVisibility() {
-                                            const element = document.querySelector('.gif-flotanteee');
-                                            const rect = element.getBoundingClientRect();
-                                            
-                                            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                                                // Si el elemento es visible, activa la animación
-                                                element.style.animation = 'aparecer-desde-izquierda 1s forwards';
-                                            }
-                                        }
-                                    
-                                        // Ejecutar la función al hacer scroll
-                                        window.addEventListener('scroll', checkVisibility);
-                                        
-                                        // Llamar a la función también al cargar la página para asegurar que funcione en cualquier momento
-                                        checkVisibility();
-                                    </script>
+                                    </div> 
                                     <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-d5d3e58" data-id="d5d3e58" data-element_type="column">
                                         <div class="elementor-widget-wrap elementor-element-populated">
                                             <div class="elementor-element elementor-element-d44f623 elementor-widget elementor-widget-heading" data-id="d44f623" data-element_type="widget" data-settings="{&quot;_animation_mobile&quot;:&quot;fadeInDown&quot;}" data-widget_type="heading.default">
